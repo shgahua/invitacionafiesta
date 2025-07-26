@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>¡Estás Invitado!</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 50px 20px;
+      background-image: url('https://monterreylive.com/wp-content/uploads/2025/07/natanael-cano-lanza-porque-la-demora.jpg');
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-position: center;
+      color: white;
+    }
+
+    .card {
+      background-color: rgba(0, 0, 0, 0.6);
+      border-radius: 15px;
+      padding: 30px;
+      max-width: 700px;
+      margin: 30px auto;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+    }
+
+    h1, h2 {
+      color: #ffcc70;
+      margin-bottom: 10px;
+    }
+
+    p {
+      font-size: 18px;
+      color: #f1f1f1;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #ff9933;
+      color: white;
+      border: none;
+      padding: 12px 25px;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    button:hover {
+      background-color: #e67e22;
+    }
+
+    #respuesta {
+      margin-top: 30px;
+      font-size: 20px;
+      color: #8aff78;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 100%;
+      height: 400px;
+      border: none;
+      border-radius: 12px;
+      margin-top: 30px;
+      box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      iframe {
+        height: 300px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Primer recuadro con la invitación -->
+  <div class="card">
+    <h1>🎉 ¡Te invito a mi fiesta! 🎉</h1>
+    <p><strong>🗓️ Fecha:</strong> Este Domingo 27 de Julio a las 3:00 PM</p>
+<p>Habrá comida, música y buen ambiente. ¡No faltes!</p>
+
+    <p><strong>📍 Lugar:</strong> Mira la ubicación exacta abajo 👇</p>
+ 
+    <button id="btnAsistir">¿Asistirás?</button>
+    <div id="respuesta"></div>
+
+    <!-- Mapa Street View -->
+    <iframe 
+      src="https://www.google.com/maps/embed?pb=!4v1721926838470!6m8!1m7!1srOy6rkHTkE8n6XAvHO7NCw!2m2!1d19.5478434!2d-99.0297941!3f131.81!4f79.16!5f0.7820865974627469" 
+      allowfullscreen 
+      loading="lazy" 
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <!-- Segundo recuadro para más información -->
+  <div class="card">
+    <h2>📝 Información adicional</h2>
+    <p><strong>🎽 Si no tienes idea de un regalo para Sharon :</strong>🎽 -Perfumes</p>
+
+<p><strong>🎽 -Ropa color negro talla M</p>
+
+<p><strong>🎽 -Un natanel Cano tamaño real de carton o lo que sea relacionado con el cantante</p>
+
+<p><strong>🎽 -Faldas</p>
+
+<p><strong>🎽 -Pijamas</p>
+
+<p><strong>🎽 -Cualquier regalo sera bien recibido ESTAS SOLO SON IDEAS, CON SU ASISTENCIA BASTA Y SOBRA</p>
+
+<p><strong>🎽 Si no tienes idea de un regalo para Edson: -Perfumes</p>
+
+<p><strong>🎽 -Sudaderas</p>
+
+<p><strong>🎽 -Gorras</p>
+
+<p><strong>🎽 -Cualquier regalo sera bien recibido ESTAS SOLO SON IDEAS, CON SU ASISTENCIA BASTA Y SOBRA</p>
+
+<p><strong>🎁 ¿Qué llevar?: Solo muchas ganas de divertirte y de escuchar Corridos 😄</p>
+
+
+
+<p><strong>🎂 Motivo: Celebración de cumpleaños de Sharon#19 y Edson#28</p>
+      </div>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const boton = document.getElementById("btnAsistir");
+      const respuesta = document.getElementById("respuesta");
+
+      boton.addEventListener("click", function() {
+        const nombre = prompt("¿Cuál es tu nombre?");
+        if (nombre && nombre.trim() !== "") {
+          respuesta.textContent = ¡Genial, ${nombre}! Te esperamos 🎊;
+        } else {
+          respuesta.textContent = ¡Esperamos verte allí!;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
